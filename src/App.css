@@ -1,0 +1,14 @@
+@font-face {
+    font-family: EliceDXNeolli-Bold;
+    src: url('./font/EliceDXNeolli_TTF/EliceDXNeolli-Bold.ttf');
+}
+
+@font-face {
+    font-family: EliceDXNeolli-Light;
+    src: url('./font/EliceDXNeolli_TTF/EliceDXNeolli-Light.ttf');
+}
+
+@font-face {
+    font-family: EliceDXNeolli-Medium;
+    src: url('./font/EliceDXNeolli_TTF/EliceDXNeolli-Medium.ttf');
+}
