@@ -10,7 +10,7 @@ export const QuestFrame = styled.div`
     top: 16%;
     border: 1px solid none;
     border-radius: 40px;
-    box-shadow: 0px 4px 20px 2px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 4px 20px 2px rgba(0, 0, 0, 0.21);
     display: flex ;
     justify-content: center;
     align-items: center;

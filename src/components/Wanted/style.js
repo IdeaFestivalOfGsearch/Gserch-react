@@ -12,5 +12,5 @@ export const Frame = styled.div`
     background-color: white;
     border: 1px solid none;
     border-radius: 34px;
-    box-shadow: 0px 4px 18px 1px rgba(0, 0, 0, 0.393);
+    box-shadow: 0px 4px 18px 1px rgba(0, 0, 0, 0.21);
 `

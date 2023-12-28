@@ -1,11 +1,10 @@
-import UploadImg from "../../../asset/svg/UploadImg";
 import Modal from "../../Modal";
 import * as S from "./style"
 
-export default function FindModal({changeStates}){
+export default function FindModal({changeFind}){
 
     function handleClick(){
-        changeStates();
+        changeFind();
     }
 
     return(
@@ -24,12 +23,12 @@ export default function FindModal({changeStates}){
                     placeholder="제목을 입력하세요" 
                     required 
                     />
-                    <S.Upload>
-                        <UploadImg/>
-                    </S.Upload>
                 </S.FindMiddle>
                 <S.ContentFrame>
-                    <S.Content placeholder="설명을 입력하세요(잃어버린 위치, 시간 등)"/>
+                    <S.Content placeholder="설명을 입력하세요(찾은 위치, 시간 등)"/>
+                    <S.SubmitBtn>
+                        완료
+                    </S.SubmitBtn>
                 </S.ContentFrame>
             </S.ModalFrame>
         </>

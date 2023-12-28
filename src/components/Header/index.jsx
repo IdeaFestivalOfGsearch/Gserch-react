@@ -2,11 +2,15 @@ import HomeLogo from "../../asset/svg/HomeLogo"
 import * as S from './style'
 import { useNavigate } from "react-router-dom"
 
-export default function Header(){
+export default function Header({changeProfile}){
     const navigate = useNavigate();
 
-    const goHome = () =>{
+    function goHome(){
         navigate("/");
+    }
+
+    function profilehandler(){
+        changeProfile();
     }
     
     const nickname = "test.gsm.hs.kr";
@@ -18,7 +22,7 @@ export default function Header(){
             </S.HoemBtn>
             <S.BtnFrame>
                 {nickname}
-                <S.ProfileBtn/>
+                <S.ProfileBtn onClick={profilehandler}/>
             </S.BtnFrame>
         </S.Top>
     )

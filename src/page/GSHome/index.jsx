@@ -4,25 +4,41 @@ import Wanted from "../../components/Wanted"
 import Quest from "../../components/Quest"
 import FindModal from "../../components/Find/FindModal"
 import { useState } from "react";
+import QuestModal from "../../components/Quest/QuestModal"
+import ProfileModal from "../../components/Header/ProfileModal"
 
 export default function GSHome(){
 
-    const [isshow,setIsshow] = useState(false);
-    const openModalHandler = () => {
-        setIsshow(!isshow);
-        console.log("alsdkfja");
+    const [isFindshow,setIsFindshow] = useState(false);
+    const [isQuestshow,setIsQuestshow] = useState(false);
+    const [isProfileshow,setIsProfileshow] = useState(false);
+    function openFindHandler(){
+        setIsFindshow(!isFindshow);
       };
 
+    function openQuestHandler(){
+        setIsQuestshow(!isQuestshow);
+    }
+
+    function openProfileHandler(){
+        setIsProfileshow(!isProfileshow);
+    }
 
     return(
         <>
-            <Header/>
-            <Find changeStates={openModalHandler}/>
-            {
-                isshow?<FindModal changeStates={openModalHandler}/>:null
-            }
+            <Header changeProfile={openProfileHandler}/>
+            <Find changeFind={openFindHandler}/>
             <Wanted/>
-            <Quest/>
+            <Quest changeQuest={openQuestHandler}/>
+            {
+                isProfileshow?<ProfileModal changeProfile={openProfileHandler}/>:null
+            }
+            {
+                isFindshow?<FindModal changeFind={openFindHandler}/>:null
+            }
+            {
+                isQuestshow?<QuestModal changeQuest={openQuestHandler}/>:null
+            }
         </>
     )
 }
