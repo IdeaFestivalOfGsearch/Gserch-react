@@ -54,7 +54,7 @@ export default function QuestModal({changeQuest}){
         formData.append("uploadFile", document.frm.uploadFile.files[0]);
 
         axios
-            .post("http://localhost:3001/form", formData)
+            .post("http://localhost:3001/form", title)
             .then((res) => {
                 console.log(res.data);
                 alert("file upload success");

@@ -6,7 +6,7 @@ export default function Header({changeProfile}){
     const navigate = useNavigate();
 
     function goHome(){
-        navigate("/");
+        navigate("/home");
     }
 
     function profilehandler(){

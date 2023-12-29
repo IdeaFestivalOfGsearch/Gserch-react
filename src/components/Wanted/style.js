@@ -7,10 +7,10 @@ export const Frame = styled.div`
     position: absolute;
     left: 12%;
     top:16%;
-    width: 600px;
-    height: 700px;
+    width: 35%;
+    height: 75%;
     background-color: white;
     border: 1px solid none;
-    border-radius: 34px;
+    border-radius: 2.8vw;
     box-shadow: 0px 4px 18px 1px rgba(0, 0, 0, 0.21);
 `

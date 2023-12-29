@@ -17,6 +17,10 @@ export const FindIcon = styled.div`
         margin:20px 0px 0px 20px;
         width: 30px;
         height: 30px;
+        min-width: 30px;
+        max-width: 40px;
+        min-height: 30px;
+        max-height: 40px;
     }
 `
 

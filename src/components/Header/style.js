@@ -6,18 +6,18 @@ export const Top = styled.div`
 `
 export const HoemBtn = styled.div`
     > *{
-        width:250px;
-        height: 68px;
+        width:16vw;
+        height: 4vw;
         cursor: pointer;
     }
 `
 
 export const ProfileBtn = styled.button`
     margin: 0 20px 0 20px;
-    width: 55px;
-    height: 55px;
+    width: 3vw;
+    height: 3vw;
     background: #0774DB;
-    border-radius: 18px;
+    border-radius: 1vw;
     border-width: 0;
     cursor: pointer;
 `
@@ -27,6 +27,6 @@ export const BtnFrame = styled.div`
     align-items: center;
     flex-direction: row;
     font-family: EliceDXNeolli-Light;
-    font-size: 20px;
+    font-size: 1.5vw;
     font-weight: 300;
 `

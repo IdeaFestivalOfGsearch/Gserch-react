@@ -60,11 +60,39 @@ export const ProfileRight = styled.div`
     border-radius: 0 0 38px 0;
 `
 
-export const ProfileTitle = styled.p`
-    margin-top: -550px;
-    margin-left: 300px;
+export const Profilenickname = styled.p`
+    margin-top: -500px;
     text-align: center;
-    font-family: EliceDXNeolli-Medium;
+    font-family: EliceDXNeolli-Light;
     font-size: 60px;
-    font-weight: 300;
+`
+
+export const ProfilePoint = styled.p`
+    text-align: center;
+    font-family: EliceDXNeolli-Light;
+    font-size: 40px;
+    margin-left: -60px;
+`
+
+export const ProfileTitle = styled.p`
+    margin-top: -50px;
+    text-align: center;
+    font-family: EliceDXNeolli-Light;
+    font-size: 35px;
+`
+
+export const StoreBtn = styled.div`
+    width: 60px;
+    height: 60px;
+    position: relative;
+    left: 65%;
+    top: -100px;
+    background-color: #F4F4F4;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 10px;
+    >*{
+        width: 50px;
+        margin-top: -4px;
+    }
 `

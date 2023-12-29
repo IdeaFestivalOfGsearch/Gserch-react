@@ -3,8 +3,8 @@ import styled from "styled-components";
 export const ModalFrame = styled.div`
     left: 25%;
     top: 15%;
-    width: 720px;
-    height: 720px;
+    width: 42%;
+    height: 75%;
     background-color: white;
     position: absolute;
     border-radius: 40px;
@@ -22,12 +22,10 @@ export const QuestTitle = styled.div`
 
 export const ExitBtn = styled.button`
     position: relative;
-    top: -25px;
-    left: 55px;
-    margin-left: 580px;
-    border-radius: 10px;
-    width: 30px;
-    height: 30px;
+    left: 78%;
+    border-radius: 1vh;
+    width: 2vw;
+    height: 2vw;
     color: white;
     background-color: #0774DB;
     border: 0;
@@ -62,8 +60,8 @@ export const Upload = styled.div`
     justify-content: center;
     background-color: #F4F4F4;
     border-radius: 40px;
-    width: 200px;
-    height: 200px;
+    width: 12vw;
+    height: 12vw;
     box-shadow: 0px 3px 20px 1px rgba(0, 0, 0, 0.25);
     cursor: pointer;
     input{
@@ -71,14 +69,14 @@ export const Upload = styled.div`
     }
     img{
         border-radius: 40px;
-        width: 200px;
-        height: 200px;
+        width: 12vw;
+        height: 12vw;
     }
 `
 
 export const ContentFrame = styled.div`
-    width: 600px;
-    height: 350px;
+    width: 85%;
+    height: 50%;
     margin-left: 8%;
     margin-top: 5%;
     border-radius: 40px;
@@ -94,8 +92,8 @@ export const Content = styled.textarea`
     background: #F4F4F4;
     margin-top: 20px;
     margin-left: 20px;
-    width: 560px;
-    height: 300px;
+    width: 92%;
+    height: 85%;
 `
 
 export const SubmitBtn = styled.button`
@@ -108,7 +106,7 @@ export const SubmitBtn = styled.button`
     margin-left: 85%;
     border: none;
     border-radius: 5px;
-    width: 50px;
+    width: 3vw;
     height: 28px;
     font-family:  EliceDXNeolli-Light;
     font-size: 14px;
