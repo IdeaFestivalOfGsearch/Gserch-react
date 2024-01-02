@@ -5,6 +5,7 @@ import backgnd from '../src/asset/png/background.png'
 import './App.css'
 import Login from "./page/Login";
 import Signup from "./page/Signup"
+import First from "./page/First";
 
 function App() {
   const BackImg = createGlobalStyle`
@@ -21,6 +22,9 @@ function App() {
   `
   return (
     <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<First/>}/>
+      </Routes>
       <Routes>
         <Route path="/signup" element={<Signup/>}/>
       </Routes>

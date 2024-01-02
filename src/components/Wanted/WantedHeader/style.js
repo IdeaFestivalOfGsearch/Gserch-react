@@ -7,7 +7,7 @@ export const WantedFrame = styled.div`
 
 export const Wantedheader = styled.div`
     width: 600px;
-    height: 75px;
+    height: 60px;
     display: flex;
     flex-direction: row;
 `
