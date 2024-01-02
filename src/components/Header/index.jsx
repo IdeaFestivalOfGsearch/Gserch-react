@@ -13,7 +13,7 @@ export default function Header({changeProfile}){
         changeProfile();
     }
     
-    const nickname = "test.gsm.hs.kr";
+    const nickname = "test@gsm.hs.kr";
 
     return(
         <S.Top>

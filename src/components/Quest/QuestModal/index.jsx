@@ -45,23 +45,22 @@ export default function QuestModal({changeQuest}){
         encodeFileToBase64(e.target.files[0]);
     }
 
-    function onSubmit(e){
+    async function onSubmit(e){
         e.preventDefault();
-    
-        let formData = new FormData();
-        formData.append("title", title);
-        formData.append("content", content);
-        formData.append("uploadFile", document.frm.uploadFile.files[0]);
 
-        axios
-            .post("http://localhost:3001/form", title)
-            .then((res) => {
-                console.log(res.data);
-                alert("file upload success");
-            })
-            .catch((error) => {
-                alert("file upload fail");
-            });
+        await axios.post("http://localhost:3001/quest",{
+            title:title,
+            content:content,
+            img:imageSrc,
+        })
+        .then((res) => {
+            console.log(res.data);
+            alert("등록이 완료되었습니다.");
+            window.location.reload();
+        })
+        .catch((error) => {
+          console.log(error);
+        });
         }
     
     return(
@@ -74,35 +73,37 @@ export default function QuestModal({changeQuest}){
                         X
                     </S.ExitBtn>
                 </S.QuestTitle>
-                <S.QuestMiddle>
-                    <input 
-                    value={title}
-                    onChange={titlechange}
-                    type="text"
-                    placeholder="제목을 입력하세요" 
-                    multiple
-                    required 
-                    />
-                    <S.Upload onClick={onclickUploadImg}>
-                        {able?<UploadImg/>:<img src={imageSrc}></img>}
+                <form onSubmit={onSubmit}>
+                    <S.QuestMiddle>
                         <input 
-                        type="file" 
-                        accept = "image/*"
-                        hidden
-                        ref={fileInputRef}
-                        onChange={changeImg}
+                        value={title}
+                        onChange={titlechange}
+                        type="text"
+                        placeholder="제목을 입력하세요" 
+                        multiple
+                        required 
                         />
-                    </S.Upload>
-                </S.QuestMiddle>
-                <S.ContentFrame>
-                    <S.Content 
-                    value={content} 
-                    placeholder="설명을 입력하세요(찾은 위치, 시간 등)"
-                    onChange={contentchange}/>
-                    <S.SubmitBtn type="submit" onSubmit={onSubmit}>
-                        완료
-                    </S.SubmitBtn>
-                </S.ContentFrame>
+                        <S.Upload onClick={onclickUploadImg}>
+                            {able?<UploadImg/>:<img src={imageSrc}></img>}
+                            <input 
+                            type="file" 
+                            accept = "image/*"
+                            hidden
+                            ref={fileInputRef}
+                            onChange={changeImg}
+                            />
+                        </S.Upload>
+                    </S.QuestMiddle>
+                    <S.ContentFrame>
+                        <S.Content 
+                        value={content} 
+                        placeholder="설명을 입력하세요(찾은 위치, 시간 등)"
+                        onChange={contentchange}/>
+                        <S.SubmitBtn type="submit">
+                            완료
+                        </S.SubmitBtn>
+                    </S.ContentFrame>
+                </form>
             </S.ModalFrame>
         </>
     )

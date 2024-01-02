@@ -32,7 +32,7 @@ export const ExitBtn = styled.button`
     cursor: pointer;
 `
 
-export const QuestMiddle = styled.form`
+export const QuestMiddle = styled.div`
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -42,7 +42,7 @@ export const QuestMiddle = styled.form`
         font-size: 40px;
         font-weight: 500;
         font-family: EliceDXNeolli-Medium;
-        width: 350px;
+        width: 18vw;
         height: 40px;
         outline: 0;
         margin-top: 20px;
@@ -76,7 +76,7 @@ export const Upload = styled.div`
 
 export const ContentFrame = styled.div`
     width: 85%;
-    height: 50%;
+    height: 35vh;
     margin-left: 8%;
     margin-top: 5%;
     border-radius: 40px;
@@ -93,7 +93,19 @@ export const Content = styled.textarea`
     margin-top: 20px;
     margin-left: 20px;
     width: 92%;
-    height: 85%;
+    height: 30vh;
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+        width: 25px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: hsla(0, 0%, 42%, 0.49);
+        border-radius: 100px;
+        background-clip: padding-box;
+        border: 10px solid transparent;
+    }
 `
 
 export const SubmitBtn = styled.button`
